@@ -1,0 +1,111 @@
+.portfolio {
+
+    @media (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.visually-hidden {
+    @extend %visually-hidden;
+}
+
+.portfolio-card {
+    background-color: var(--light-background);
+
+    @media (min-width:768px) {
+            width: 354px;
+            height: 440px;
+    }
+
+    @media (min-width:1200px) {
+        width: 370px;
+        height: 404px;
+    }
+    
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width:1200px) {
+
+        &:nth-last-child(-n + 3) {
+            margin-bottom: 0;
+        }
+    }
+
+}
+    
+.portfolio-card__image {
+    position: relative;
+    overflow: hidden;
+}
+    
+.portfolio-card__link {
+    text-decoration: none;
+    display: block;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+    
+.portfolio-card__box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition: transform var(--transition-type);
+    transform: translateY(100%);
+
+    .portfolio-card__link:hover &,
+    .portfolio-card__link:focus & {
+        transform: translateY(0);
+    }
+}
+    
+.portfolio-card__description {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--main-text);
+}
+
+.portfolio-card__text {
+    padding: 20px 24px;
+    border-right: 1px solid var(--portfolio-border);
+    border-bottom: 1px solid var(--portfolio-border);
+    border-left: 1px solid var(--portfolio-border);
+
+    @media (min-width:768px) {
+            height: 146px;
+    }
+
+    @media (min-width:1200px) {
+        height: 110px;
+}
+}
+
+.portfolio-card__title {
+    margin-bottom: 4px;
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--section-text);
+}
+
+.portfolio-card__type {
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--additional-text);
+}

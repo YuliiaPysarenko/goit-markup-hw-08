@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--section-text);
+    letter-spacing: 0.03em;
+    line-height: 1.14;
+    font-size: 14px;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--brand-color);
+    display: inline-block;
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
+    &--padding-top-cancel {
+        padding-top: 0;
+    }
+}
+
+.section__title {
+    margin-bottom: 30px;
+    font-weight: var(--font-weight-bold);
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--section-text);
+
+    @media (min-width:1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    &--visually-hidden {
+        @extend %visually-hidden;
+    }
+}
+
+.section__title--small-margin {
+    margin-bottom: 15px;
+}
+
+.container {
+    padding: 0 15px;
+
+    @media (min-width:768px) {
+        margin: 0 auto;
+        width: 768px;
+    }
+
+    @media (min-width:1200px) {
+        width: 1200px;
+    }
+
+
+    &--flex {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-around;
+        }
+
+        @media (min-width: 1200px) {
+            align-items: baseline;
+            justify-content: space-between;
+        }
+    }
+    
+
+    &--flex-center {
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+.header .container--no-padding {
+    @media (max-width: 767px) {
+        padding: 0;
+    }
+}
+
+.section .container--no-padding {
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.section--not-visible-mob {
+    @media (max-width:1199px) {
+        display: none;
+    }
+}

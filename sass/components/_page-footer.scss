@@ -1,0 +1,21 @@
+.footer {
+    padding: 60px 0;
+    background-color: var(--dark-background);
+}
+
+.join-us {
+    text-align: center;
+    margin-bottom: 60px;
+    
+    @media (min-width: 1200px) {
+        text-align: left;
+        margin-left: 70px;
+    }
+    
+}
+
+.join-us__title {
+    margin-bottom: 20px;
+    color: var(--main-text);
+    @extend %block__title;
+}

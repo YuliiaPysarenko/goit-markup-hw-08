@@ -1,0 +1,113 @@
+.hero {
+    margin: 0 auto;
+    padding: 118px 0;
+    max-width: 1600px;
+    min-height: 400px;
+    background-color: var(--dark-background);
+    background-image: linear-gradient(
+        to bottom,
+        var(--gradient-color-1),
+        var(--gradient-color-2)
+    ), url(../images/bg-image_mobile.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+                to bottom,
+                var(--gradient-color-1),
+                var(--gradient-color-2)
+            ), url(../images/bg-image_mobile@2x.jpg);
+    }
+
+    @media (min-width: 576px),
+            (min-resolution: 192dpi)  and (min-width: 576px),
+            (min-resolution: 2dppx) and (min-width: 576px) {
+        background-image: linear-gradient(
+            to bottom,
+            var(--gradient-color-1),
+            var(--gradient-color-2)
+        ), url(../images/bg-image_tablet.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                background-image: linear-gradient(
+                    to bottom,
+                    var(--gradient-color-1),
+                    var(--gradient-color-2)
+                ), url(../images/bg-image_tablet@2x.jpg);
+        }
+    }
+
+    @media (min-width: 960px),
+            (min-resolution: 192dpi)  and (min-width: 960px),
+            (min-resolution: 2dppx) and (min-width: 960px) {
+        background-image: linear-gradient(
+            to bottom,
+            var(--gradient-color-1),
+            var(--gradient-color-2)
+        ), url(../images/bg-image_desktop.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                background-image: linear-gradient(
+                    to bottom,
+                    var(--gradient-color-1),
+                    var(--gradient-color-2)
+                ), url(../images/bg-image_desktop@2x.jpg);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        padding: 200px 0;
+    }
+}
+
+.hero__title {
+    margin: 0 auto 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--main-text);
+
+    @media (min-width: 480px) {
+        width: 360px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 700px;
+
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
+
+.hero__button {
+    padding: 10px 32px;
+    margin: 0 auto;
+    display: block;
+    
+    font-family: inherit;
+    font-weight: var(--font-weight-bold);
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    background-color: var(--brand-color);
+    color: var(--main-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-type), color var(--transition-type);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-in-focus);
+    }
+}

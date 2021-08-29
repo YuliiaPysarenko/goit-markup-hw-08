@@ -1,0 +1,55 @@
+.conditions {
+    margin-bottom: 30px;
+}
+
+.conditions__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    line-height: 1.71;
+
+    &::text {
+        display: inline;
+    }
+}
+
+.conditions__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  
+    border: 2px solid var(--checkbox-color);
+    border-radius: 3px;
+
+    transition: fill var(--transition-type), border-color var(--transition-type);
+    fill: transparent;
+  
+    .conditions__input:checked + & {
+        border-color: var(--brand-color);
+        fill: var(--light-background);
+        background-color: var(--brand-color);
+    }
+    
+    .conditions__input:hover + &,
+    .conditions__input:focus + & {
+        border-color: var(--brand-color);
+    }
+}
+
+.conditions__input--visually-hidden {
+    @extend %visually-hidden;
+}
+
+.conditions__text {
+    display: inline;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+
+    color: var(--additional-text);
+}

@@ -1,0 +1,46 @@
+:root {
+    --brand-color: #2196F3;
+    --basic-text: #000;
+    --main-text: #fff;
+    --section-text: #212121;
+    --additional-text: #757575;
+    --address-link: rgba(255, 255, 255, 0.6);
+
+    --team-section-background: #F5F4FA;
+    --light-background: #fff;
+    --dark-background: #2F303A;
+    --gradient-color-1: rgba(47, 48, 58, 0.4);
+    --gradient-color-2: rgba(47, 48, 58, 0.4);
+    --logo-icon-header: #757575;
+    --logo-icon-benefit: #212121;
+    --logo-icon-social: #AFB1B8;
+    --logo-icon-partners: #AFB1B8;
+    --button-in-focus: #188CE8;
+    --checkbox-color: #2a2a2a;
+    
+    --header-border: #ECECEC;
+    --portfolio-border: #EEEEEE;
+
+    --font-weight-bold: bold;
+
+    --transition-type: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+%block__title {
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    line-height: 1.14;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+%visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}

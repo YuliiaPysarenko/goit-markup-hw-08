@@ -1,0 +1,26 @@
+.activity {
+
+    // this block is only in PC version
+    display: flex;
+    justify-content: space-between;
+
+    & > li {
+        position: relative;
+    }
+}
+    
+.activity__block {
+    position: absolute;
+    width: 100%;
+    padding: 27px 0;
+    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.activity__title {
+    margin-bottom: 10px;
+    @extend %block__title;
+    text-align: center;
+    color: var(--main-text);
+    margin-bottom: 0;
+}
