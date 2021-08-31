@@ -462,7 +462,6 @@ a {
   z-index: 999;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  overflow-y: scroll;
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
@@ -472,6 +471,7 @@ a {
 .menu-container.is-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  overflow-y: scroll;
 }
 
 .menu-container .menu-toggle {
