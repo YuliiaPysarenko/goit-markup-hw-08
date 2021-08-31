@@ -239,7 +239,7 @@ a {
   font-weight: 500;
 }
 
-@media (min-width: 479px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .auth-nav {
     margin-top: 300px;
   }
@@ -490,14 +490,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media (max-width: 479px) {
-  .mobile-menu {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 
 .mobile-menu .link {
@@ -872,6 +864,10 @@ footer .logo {
 
 .footer .social-media__icon {
   fill: var(--main-text);
+}
+
+.mobile-menu .social-media {
+  margin-bottom: 48px;
 }
 
 @media (max-width: 479px) {
