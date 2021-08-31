@@ -5,7 +5,10 @@
 
 .join-us {
     text-align: center;
-    margin-bottom: 60px;
+    
+    @media (max-width: 767px) {
+        margin-bottom: 60px;
+    }
     
     @media (min-width: 1200px) {
         text-align: left;
